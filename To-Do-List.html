@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>To-Do List</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="heading">
+        <img class="heading__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/laptop.svg">
+        <h1 class="heading__title">To-Do List</h1>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+      
+      <!-- List Management Section -->
+      <div class="list-management">
+        <div class="list-tabs" id="list-tabs">
+          <button class="list-tab active" data-list="default">📝 Main List</button>
+        </div>
+        <div class="list-controls">
+          <input type="text" id="new-list-input" class="new-list-input" placeholder="New list name..." />
+          <button id="add-list-btn" class="add-list-btn">+ Add List</button>
+        </div>
+      </div>
+      <form class="form">
+        <div>
+          <label class="form__label" for="todo">~ Today I need to ~</label>
+          <input class="form__input"
+               type="text"
+               id="todo"
+               name="to-do"
+               size="30"
+               required>
+          <!-- Category input removed -->
+          <input type="date" id="due-date" class="due-date-input" />
+          <select id="priority-select" class="priority-select">
+            <option value="low">Low Priority</option>
+            <option value="medium" selected>Medium Priority</option>
+            <option value="high">High Priority</option>
+          </select>
+          <button class="button"><span>Submit</span></button>
+        </div>
+      </form>
+      <div>
+        <ul class="toDoList">
+        </ul>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
